@@ -1,0 +1,61 @@
+*{
+    scroll-behavior: smooth;
+}
+body{
+    background: #000;
+}
+.wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    perspective: 1500px;
+    
+}
+.box-area{
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 30s linear infinite;
+    box-shadow: 0px 0px 50px beige;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate3d(0,0,0,0);
+    }
+    100%{
+        transform: rotate3d(0,1,0,360deg);
+    }
+}
+.box{
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    border: 1px solid #c5c1c1;
+    background: rgba(55, 168, 233, 0.1);
+}
+.box-front{
+    transform: translateX(-200px) translateY(-200px) translateZ(200px);
+    
+}
+.box-back{
+    transform: translateX(-200px) translateY(-200px) translateZ(-200px);
+    
+}
+.box-right{
+    transform: translateY(-200px) rotateY(90deg);
+    
+}
+.box-left{
+    transform: translateY(-200px) translateX(-400px) rotateY(90deg);
+    
+}
+.box-bottom{
+    transform: translateX(-200px) rotateX(90deg);
+    box-shadow: 0px 0px 100px rgb(253, 253, 253);
+}
+.box-top{
+    transform: translateX(-200px) translateY(-400px) rotateX(90deg);
+    background: beige;
+}
+.box-area{
+    transform: rotateX(90deg) rotateY(90deg);
+}
